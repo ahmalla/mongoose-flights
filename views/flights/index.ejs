@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Document</title>
+    <title>Mongoose FLights</title>
 </head>
 <body>
     <h2>Flights List</h2>
@@ -20,13 +20,12 @@
   </thead>
   <tbody>
     <% flights.forEach(function(f) { %>
-       <% console.log('flight') %>
-       <% console.log(f) %>
       <tr>
         <td><%= f.airline %></td>
         <td><%= f.airport %></td>
         <td><%= f.flightNo %></td>
         <td><%= f.departs %></td>
+        <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
         </tr>
       <% }); %>
   </tbody>
