@@ -18,5 +18,29 @@
         <div>Departs: </div>
         <div><%= flight.departs %></div>
       </section>
+      <br><br><h2>Destinations</h2>
+<form id="add-destination-form" method="POST"
+  action="/flights/<%= flight._id %>/destinations">
+  <label>Destination:</label>
+  <textarea name="content"></textarea>
+  <br><br>
+  <label>Airport:</label>
+  <select name="airport">
+    <option value="AUS">AUS</option>
+    <option value="DFW">DFW</option>
+    <option value="DEN">DEN</option>
+    <option value="LAX">LAX</option>
+    <option value="SAN" selected>SAN</option>
+    </select>
+    <br><br>
+    <label>Airline:</label>
+    <select name="airline">
+        <option value="American">American</option>
+        <option value="Southwest">Southwest</option>
+        <option value="United" selected>United</option>
+    </select>
+  </select>
+  <input type="submit" value="Add Destination">
+</form>
 </body>
 </html>
