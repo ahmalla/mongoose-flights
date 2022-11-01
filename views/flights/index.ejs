@@ -20,11 +20,13 @@
   </thead>
   <tbody>
     <% flights.forEach(function(f) { %>
+       <% console.log('flight') %>
+       <% console.log(f) %>
       <tr>
-        <td><%= f.Airline %></td>
-        <td><%= f.Airport %></td>
-        <td><%= f.FlightNo %></td>
-        <td><%= f.Departs %></td>
+        <td><%= f.airline %></td>
+        <td><%= f.airport %></td>
+        <td><%= f.flightNo %></td>
+        <td><%= f.departs %></td>
         </tr>
       <% }); %>
   </tbody>
